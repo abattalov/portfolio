@@ -1,51 +1,125 @@
-<section id="skills">
-    Skills
-    <div>
-        <h3>Frontend</h3>
-        <ul>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>JavaScript</li>
-            <li>TypeScript</li>
-            <li>React</li>
-            <li>AngularJS</li>
-            <li>Astro</li>
-            <li>Ruby on Rails</li>
-        </ul>
-    </div>
-    <div>
-        <h3>Backend</h3>
-        <ul>
-            <li>Python</li>
-            <li>NodeJS</li>
-            <li>TypeScript</li>
-            <li>Ruby</li>
-            <li>PostgreSQL</li>
-            <li>SQLite</li>
-        </ul>
-    </div>
-    <div>
-        <h3>DevOps & AI</h3>
-        <ul>
-            <li>Azure DevOps</li>
-            <li>Azure AI Foundry</li>
-            <li>CI/CD Pipelines</li>
-            <li>Azure Test Plans</li>
-            <li>Docker</li>
-            <li>Playwright</li>
-        </ul>
-    </div>
-    <div>
-        <h3>ServiceNow</h3>
-        <ul>
-            <li>Service Portal Widgets</li>
-            <li>Flow Designer</li>
-            <li>Integrations</li>
-            <li>REST APIs</li>
-            <li>Business Rules</li>
-            <li>Email Notifications</li>
-            <li>Scheduled Jobs</li>
-            <li>Access Controls (ACLs)</li>
-        </ul>
+<section id="skills" class="skills">
+    <h1 class="section-title">Skills</h1>
+    <div class="skills-grid">
+        <div class="skill-category">
+            <h3 class="category-title">Frontend</h3>
+            <ul class="skill-list">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>TypeScript</li>
+                <li>React</li>
+                <li>AngularJS</li>
+                <li>Astro</li>
+                <li>Ruby on Rails</li>
+            </ul>
+        </div>
+        
+        <div class="skill-category">
+            <h3 class="category-title">Backend</h3>
+            <ul class="skill-list">
+                <li>Python</li>
+                <li>NodeJS</li>
+                <li>TypeScript</li>
+                <li>Ruby</li>
+                <li>PostgreSQL</li>
+                <li>SQLite</li>
+            </ul>
+        </div>
+        
+        <div class="skill-category">
+            <h3 class="category-title">DevOps & AI</h3>
+            <ul class="skill-list">
+                <li>Azure DevOps</li>
+                <li>Azure AI Foundry</li>
+                <li>CI/CD Pipelines</li>
+                <li>Azure Test Plans</li>
+                <li>Docker</li>
+                <li>Playwright</li>
+            </ul>
+        </div>
+        
+        <div class="skill-category">
+            <h3 class="category-title">ServiceNow</h3>
+            <ul class="skill-list">
+                <li>Service Portal Widgets</li>
+                <li>Flow Designer</li>
+                <li>Integrations</li>
+                <li>REST APIs</li>
+                <li>Business Rules</li>
+                <li>Email Notifications</li>
+                <li>Scheduled Jobs</li>
+                <li>Access Controls (ACLs)</li>
+            </ul>
+        </div>
     </div>
 </section>
+
+<style>
+    .skills {
+        background-color: var(--bg-primary);
+    }
+
+    .section-title {
+        text-align: center;
+        margin-bottom: var(--spacing-2xl);
+    }
+
+    .skills-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: var(--spacing-lg);
+    }
+
+    @media (min-width: 768px) {
+        .skills-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    @media (min-width: 1024px) {
+        .skills-grid {
+            grid-template-columns: repeat(4, 1fr);
+        }
+    }
+
+    .skill-category {
+        background-color: var(--bg-secondary);
+        border: 1px solid var(--border);
+        border-radius: var(--radius-lg);
+        padding: var(--spacing-lg);
+        transition: all 0.3s ease;
+    }
+
+    .skill-category:hover {
+        border-color: var(--accent);
+        transform: translateY(-4px);
+    }
+
+    .category-title {
+        color: var(--accent);
+        margin-bottom: var(--spacing-md);
+        font-size: 1.25rem;
+    }
+
+    .skill-list {
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing-sm);
+    }
+
+    .skill-list li {
+        color: var(--text-secondary);
+        padding: 0.5rem 0;
+        border-bottom: 1px solid var(--border);
+        transition: color 0.2s ease;
+    }
+
+    .skill-list li:last-child {
+        border-bottom: none;
+    }
+
+    .skill-list li:hover {
+        color: var(--text-primary);
+    }
+</style>

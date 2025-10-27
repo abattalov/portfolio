@@ -1,9 +1,9 @@
 ---
 ---
 
-<header>
+<header class="header">
     <nav class="nav-container">
-        <ul>
+        <ul class="nav-list">
             <li><a href="#experience">Experience</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#skills">Skills</a></li>
@@ -11,3 +11,70 @@
         </ul>
     </nav>
 </header>
+
+<style>
+    .header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+        background-color: rgba(10, 10, 10, 0.8);
+        backdrop-filter: blur(10px);
+        border-bottom: 1px solid var(--border);
+    }
+
+    .nav-container {
+        max-width: var(--max-width);
+        margin: 0 auto;
+        padding: 1rem var(--spacing-md);
+    }
+
+    .nav-list {
+        display: flex;
+        gap: var(--spacing-md);
+        justify-content: center;
+        align-items: center;
+    }
+
+    .nav-list li a {
+        color: var(--text-secondary);
+        font-size: 0.9rem;
+        font-weight: 500;
+        transition: color 0.2s ease;
+        position: relative;
+    }
+
+    .nav-list li a:hover {
+        color: var(--text-primary);
+    }
+
+    .nav-list li a::after {
+        content: '';
+        position: absolute;
+        bottom: -4px;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background-color: var(--accent);
+        transition: width 0.2s ease;
+    }
+
+    .nav-list li a:hover::after {
+        width: 100%;
+    }
+
+    @media (min-width: 768px) {
+        .nav-container {
+            padding: 1.25rem var(--spacing-lg);
+        }
+
+        .nav-list {
+            gap: var(--spacing-xl);
+        }
+
+        .nav-list li a {
+            font-size: 1rem;
+        }
+    }
+</style>
